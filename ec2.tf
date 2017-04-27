@@ -35,7 +35,7 @@ resource "aws_instance" "mastodon" {
     Name = "${var.instance_name}"
   }
 
-  user_data = "${file("deploy.sh")}"
+  user_data = "${file("${path.module}/deploy.sh")}"
 }
 
 output "mastodon-ip" {
