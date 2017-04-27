@@ -35,7 +35,7 @@ resource "aws_instance" "mastodon" {
     Name = "${var.instance_name}"
   }
 
-  user_data = "${file("${path.module}/deploy.sh")}"
+  user_data = "${data.template_file.deploy.rendered}"
 }
 
 data "template_file" "deploy" {
