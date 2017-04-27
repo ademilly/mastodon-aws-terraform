@@ -38,6 +38,18 @@ resource "aws_instance" "mastodon" {
   user_data = "${file("${path.module}/deploy.sh")}"
 }
 
+data "template_file" "deploy" {
+  template = "${file("${path.module}/deploy.sh")}"
+
+  vars {
+    local_domain      = "${var.subdomain}${data.aws_route53_zone.selected.name}"
+    smtp_server       = "${var.smtp_server}"
+    smtp_login        = "${var.smtp_login}"
+    smtp_password     = "${var.smtp_password}"
+    smtp_from_address = "${var.smtp_from_address}"
+  }
+}
+
 output "mastodon-ip" {
   value = "${aws_instance.mastodon.public_ip}"
 }

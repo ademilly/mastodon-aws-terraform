@@ -11,6 +11,22 @@ variable "instance_name" {
   description = "Instance name"
 }
 
+variable "smtp_server" {
+  description = "SMTP Server ; used by service for mailing"
+}
+
+variable "smtp_login" {
+  description = "SMTP login ; used by service for mailing"
+}
+
+variable "smtp_password" {
+  description = "SMTP password ; used by service for mailing"
+}
+
+variable "smtp_from_address" {
+  description = "SMTP from address for notifications ; used by service for mailing"
+}
+
 # VPC var block
 variable "subnet_id" {
   description = "Subnet in which to launch the service"

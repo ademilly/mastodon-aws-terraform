@@ -1,3 +1,7 @@
+data aws_route53_zone selected {
+  zone_id = "${var.zone_id}"
+}
+
 resource aws_route53_record "mastodon-domain" {
   zone_id = "${var.zone_id}"
 
