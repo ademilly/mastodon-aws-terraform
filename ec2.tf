@@ -42,7 +42,7 @@ data "template_file" "deploy" {
   template = "${file("${path.module}/deploy.sh")}"
 
   vars {
-    local_domain      = "${var.subdomain}${data.aws_route53_zone.selected.name}"
+    local_domain      = "${var.domain}"
     smtp_server       = "${var.smtp_server}"
     smtp_login        = "${var.smtp_login}"
     smtp_password     = "${var.smtp_password}"

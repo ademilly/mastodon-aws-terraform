@@ -42,6 +42,10 @@ variable "zone_id" {
   description = "Zone id in which to launch the service"
 }
 
+variable "domain" {
+  description = "domain name for the service"
+}
+
 variable "subdomain" {
   description = "Subdomain name for the service"
   default     = "mastodon"
