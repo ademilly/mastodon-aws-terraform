@@ -16,6 +16,11 @@ variable "subnet_id" {
   description = "Subnet in which to launch the service"
 }
 
+# Security Group block
+variable "security_group_id" {
+  description = "Security group to attach to service"
+}
+
 # Route53 var block
 variable "zone_id" {
   description = "Zone id in which to launch the service"

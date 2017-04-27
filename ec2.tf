@@ -21,7 +21,7 @@ resource "aws_instance" "mastodon" {
   key_name = "${var.key_name}"
 
   vpc_security_group_ids = [
-    "${var.sg_id}",
+    "${var.security_group_id}",
   ]
 
   subnet_id = "${var.subnet_id}"
