@@ -12,10 +12,6 @@ variable "instance_name" {
 }
 
 # VPC var block
-variable "vpc_id" {
-  description = "VPC in which to launch the service"
-}
-
 variable "subnet_id" {
   description = "Subnet in which to launch the service"
 }
