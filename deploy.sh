@@ -34,7 +34,7 @@ docker run hello-world > /home/ubuntu/docker-status.log
 
 # clone mastodon
 cd /home/ubuntu
-su - ubuntu -c 'git clone https://github.com/tootsuite/mastodon.git'
+su - ubuntu -c 'git clone --branch v1.3.1 https://github.com/tootsuite/mastodon.git'
 
 mkdir -p /data
 mkdir -p /var/lib/postgresql/data
